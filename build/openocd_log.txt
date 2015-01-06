@@ -1,0 +1,414 @@
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000062, MEM_AP_TAR 0xe000ed04
+Error: Failed to read memory at 0xe000ed04
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000062, MEM_AP_TAR 0xe000ed04
+Error: Failed to read memory at 0xe000ed04
+Warn : target was in unknown state when halt was requested
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+in procedure 'halt'
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Error: Failed to read memory at 0x00000000
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Error: Failed to read memory at 0x00000000
+Warn : target was in unknown state when halt was requested
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+in procedure 'halt'
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Error: stm32f2x.cpu -- clearing lockup after double fault
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+Info : Padding image section 0 with 124 bytes
+Info : Padding image section 1 with 464 bytes
+Error: stm32x device protected
+Error: failed erasing sectors 0 to 0
+in procedure 'flash'
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+wrote 16384 bytes from file build/snip_apsta-BCM943362WCD4/DCT.stripped.elf in 1.348088s (11.869 KiB/s)
+shutdown command invoked
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Error: stm32f2x.cpu -- clearing lockup after double fault
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+Info : Padding image section 0 with 124 bytes
+Info : Padding image section 1 with 464 bytes
+wrote 16384 bytes from file build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/binary/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO.stripped.elf in 1.380019s (11.594 KiB/s)
+shutdown command invoked
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+wrote 16384 bytes from file build/snip_apsta-BCM943362WCD4/DCT.stripped.elf in 1.370097s (11.678 KiB/s)
+shutdown command invoked
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Error: Failed to read memory at 0x00000000
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000062, MEM_AP_TAR 0xe000ed04
+Error: Failed to read memory at 0xe000ed04
+Error: JTAG-DP OVERRUN - check clock, memaccess, or reduce jtag speed
+Error: MEM_AP_CSW 0x23000042, MEM_AP_TAR 0xe000edf0
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Warn : target was in unknown state when halt was requested
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+Info : Padding image section 0 with 124 bytes
+Info : Padding image section 1 with 464 bytes
+Error: timeout waiting for algorithm, a target reset is recommended
+Error: error executing stm32x flash write algorithm
+Error: flash write failed = 00000040
+Error: error writing to flash at address 0x08000000 at offset 0x00000000
+in procedure 'flash'
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+Error: timeout waiting for algorithm, a target reset is recommended
+Error: error executing stm32x flash write algorithm
+Error: flash write failed = 00000040
+Error: error writing to flash at address 0x08000000 at offset 0x00004000
+in procedure 'flash'
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Error: stm32f2x.cpu -- clearing lockup after double fault
+Polling target stm32f2x.cpu failed, GDB will be halted. Polling again in 100ms
+Polling target stm32f2x.cpu succeeded again, trying to reexamine
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+Info : Padding image section 0 with 124 bytes
+Info : Padding image section 1 with 464 bytes
+wrote 16384 bytes from file build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/binary/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO.stripped.elf in 1.369163s (11.686 KiB/s)
+shutdown command invoked
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+invalid command name "verify_image_checksum"
+Open On-Chip Debugger 0.9.0-dev-00209-gc3ec194 (2014-12-17-21:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Warn : Adapter driver 'buspirate' did not declare which transports it allows; assuming legacy JTAG-only
+Info : only one transport option; autoselect 'jtag'
+srst_only separate srst_gates_jtag srst_open_drain connect_deassert_srst
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+jtag_ntrst_delay: 100
+cortex_m reset_config sysresetreq
+Info : Buspirate switched to FAST mode
+Info : Buspirate Interface ready!
+Info : This adapter doesn't support configurable speed
+Info : JTAG tap: stm32f2x.cpu tap/device found: 0x4ba00477 (mfg: 0x23b, part: 0xba00, ver: 0x4)
+Info : JTAG tap: stm32f2x.bs tap/device found: 0x06411041 (mfg: 0x020, part: 0x6411, ver: 0x0)
+Info : stm32f2x.cpu: hardware has 6 breakpoints, 4 watchpoints
+auto erase enabled
+Info : device id = 0x20076411
+Info : flash size = 1024kbytes
+wrote 16384 bytes from file build/snip_apsta-BCM943362WCD4/DCT.stripped.elf in 1.388037s (11.527 KiB/s)
+shutdown command invoked
+Info : Shutting down buspirate.
+Info : Buspirate switched to normal mode

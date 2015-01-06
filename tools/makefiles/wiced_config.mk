@@ -7,7 +7,7 @@
 # or duplicated in any form, in whole or in part, without the prior
 # written permission of Broadcom Corporation.
 #
-
+MAKEFILES_PATH=./tools/makefiles/
 include $(MAKEFILES_PATH)/wiced_toolchain_common.mk
 CONFIG_FILE_DIR := build/$(CLEANED_BUILD_STRING)
 CONFIG_FILE := $(CONFIG_FILE_DIR)/config.mk
@@ -224,6 +224,7 @@ APP_WWD_ONLY        := 1
 USES_BOOTLOADER_OTA := 0
 NODCT               := 1
 endif
+
 
 EXTRA_CFLAGS :=    -DWICED_VERSION=$(SLASH_QUOTE_START)$(WICED_SDK_VERSION)$(SLASH_QUOTE_END) \
                    -DBUS=$(SLASH_QUOTE_START)$$(BUS)$(SLASH_QUOTE_END) \

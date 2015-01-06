@@ -118,23 +118,6 @@ void application_start(void)
     /* Initialise the device */
     wiced_init();
 
-    /* Bring up the STA (client) interface ------------------------------------------------------- */
-    wiced_network_up(WICED_STA_INTERFACE, WICED_USE_EXTERNAL_DHCP_SERVER, NULL);
-
-    /* The ping target is the gateway that the STA is connected to*/
-    wiced_ip_get_gateway_address( WICED_STA_INTERFACE, &ping_target_ip );
-
-    /* Print ping description to the UART */
-    WPRINT_APP_INFO(("Pinging %u.%u.%u.%u every %ums with a %ums timeout.\n", (unsigned int)((GET_IPV4_ADDRESS(ping_target_ip) >> 24) & 0xFF),
-                                                                              (unsigned int)((GET_IPV4_ADDRESS(ping_target_ip) >> 16) & 0xFF),
-                                                                              (unsigned int)((GET_IPV4_ADDRESS(ping_target_ip) >>  8) & 0xFF),
-                                                                              (unsigned int)((GET_IPV4_ADDRESS(ping_target_ip) >>  0) & 0xFF),
-                                                                              PING_PERIOD,
-                                                                              PING_TIMEOUT) );
-
-    /* Setup a regular ping event and setup the callback to run in the networking worker thread */
-    wiced_rtos_register_timed_event( &ping_timed_event, WICED_NETWORKING_WORKER_THREAD, &send_ping, PING_PERIOD, 0 );
-
     /* Bring up the softAP interface ------------------------------------------------------------- */
     wiced_network_up(WICED_AP_INTERFACE, WICED_USE_INTERNAL_DHCP_SERVER, &ap_ip_settings);
 
@@ -143,30 +126,7 @@ void application_start(void)
 
     /* Start a web server on the AP interface */
     wiced_http_server_start( &ap_http_server, 80, ap_web_pages, WICED_AP_INTERFACE );
-}
 
-
-/* Sends a ping to the target */
-static wiced_result_t send_ping( void *arg )
-{
-    uint32_t elapsed_ms;
-    wiced_result_t status;
-
-    status = wiced_ping( WICED_STA_INTERFACE, &ping_target_ip, PING_TIMEOUT, &elapsed_ms );
-
-    if ( status == WICED_SUCCESS )
-    {
-        WPRINT_APP_INFO(("Ping Reply : %lu ms\n", (unsigned long)elapsed_ms ));
-    }
-    else if ( status == WICED_TIMEOUT )
-    {
-        WPRINT_APP_INFO(("Ping timeout\n"));
-    }
-    else
-    {
-        WPRINT_APP_INFO(("Ping error\n"));
-    }
-
-    return WICED_SUCCESS;
+       
 }
 

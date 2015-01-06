@@ -29,7 +29,7 @@ extern "C" {
 
 /* This is the soft AP used for device configuration */
 #define CONFIG_AP_SSID       "NOT USED FOR THIS APP"
-#define CONFIG_AP_PASSPHRASE "NOT USED FOR THIS APP"
+#define CONFIG_AP_PASSPHRASE "NOT USED FOR THIS A5PP"
 #define CONFIG_AP_SECURITY   WICED_SECURITY_OPEN
 #define CONFIG_AP_CHANNEL    1
 #define CONFIG_AP_VALID      WICED_FALSE
@@ -37,12 +37,12 @@ extern "C" {
 /* This is the soft AP available for normal operation */
 #define SOFT_AP_SSID         "WICED Soft AP"
 #define SOFT_AP_PASSPHRASE   "abcd1234"
-#define SOFT_AP_SECURITY     WICED_SECURITY_WPA2_AES_PSK
+#define SOFT_AP_SECURITY     WICED_SECURITY_OPEN
 #define SOFT_AP_CHANNEL      1
 
 /* This is the default AP the device will connect to (as a client)*/
-#define CLIENT_AP_SSID       "YOUR_AP_SSID"
-#define CLIENT_AP_PASSPHRASE "YOUR_AP_PASSPHRASE"
+#define CLIENT_AP_SSID       "Ziggo23445"
+#define CLIENT_AP_PASSPHRASE "0616539549"
 #define CLIENT_AP_BSS_TYPE   WICED_BSS_TYPE_INFRASTRUCTURE
 #define CLIENT_AP_SECURITY   WICED_SECURITY_WPA2_MIXED_PSK
 #define CLIENT_AP_CHANNEL    1

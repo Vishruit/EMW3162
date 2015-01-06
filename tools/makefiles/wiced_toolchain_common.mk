@@ -15,7 +15,7 @@ PATH :=
 
 JTAG         ?= BCM9WCD1EVAL1
 
-
+HOST_OS=Linux64
 ifeq ($(HOST_OS),Win32)
 ################
 # Windows settings

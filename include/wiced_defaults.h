@@ -47,7 +47,7 @@ extern "C"
 //#define WPRINT_ENABLE_SECURITY_DEBUG
 //#define WPRINT_ENABLE_SECURITY_ERROR
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#define WPRINT_ENABLE_WPS_INFO           /* WPS stack prints */
+//#define WPRINT_ENABLE_WPS_INFO           /* WPS stack prints */
 //#define WPRINT_ENABLE_WPS_DEBUG
 //#define WPRINT_ENABLE_WPS_ERROR
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

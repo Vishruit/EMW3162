@@ -18,6 +18,9 @@ unset declare
 
 linux32unamestr=`${scriptdir}tools/common/Linux32/uname 2> /dev/null`
 linux64unamestr=`${scriptdir}tools/common/Linux64/uname 2> /dev/null`
+linux32unamestr='Linux'
+linux64unamestr=''
+
 osxunamestr=`${scriptdir}tools/common/OSX/uname  2> /dev/null`
 win32unamestr=`${scriptdir}tools/common/Win32/uname.exe -o 2> /dev/null`
 

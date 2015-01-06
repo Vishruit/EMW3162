@@ -113,7 +113,7 @@ export VERBOSE
 export SUB_BUILD
 export OPENOCD_LOG_FILE
 export EXTERNAL_WICED_GLOBAL_DEFINES
-
+QUIET=
 .PHONY: $(BUILD_STRING) main_app bootloader download_only test testlist clean iar_project Help download no_dct download_dct download_work copy_elf_for_eclipse run debug download_bootloader sflash_image .gdbinit factory_reset_dct
 
 Help: $(TOOLCHAIN_HOOK_TARGETS)

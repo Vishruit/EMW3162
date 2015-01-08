@@ -159,7 +159,7 @@ typedef enum
 
 typedef enum
 {
-    WICED_I2C_NONE = 0xFF,
+    WICED_I2C_1,
     WICED_I2C_MAX,
     WICED_I2C_32BIT = 0x7FFFFFFF,
 } wiced_i2c_t;

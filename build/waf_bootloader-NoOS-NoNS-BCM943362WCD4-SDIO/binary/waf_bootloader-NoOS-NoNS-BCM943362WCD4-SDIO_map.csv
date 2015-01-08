@@ -14,76 +14,75 @@ FLASH,Other, text.platform_reboot, 8, 0x0000000008000734, 134219572, build/waf_b
 FLASH,Other, text.platform_read_wifi_firmware, 4, 0x000000000800073c, 134219580, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
 FLASH,Other, text.platform_start_app, 52, 0x0000000008000740, 134219584, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
 FLASH,Other, text.platform_copy_external_to_internal, 4, 0x0000000008000774, 134219636, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_get_current_dct_address, 76, 0x0000000008000778, 134219640, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_dct_read_with_copy, 100, 0x00000000080007c4, 134219716, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_erase_app, 56, 0x0000000008000828, 134219816, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_write_app_chunk, 112, 0x0000000008000860, 134219872, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_write_dct.constprop.1, 1096, 0x00000000080008d0, 134219984, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_perform_factory_reset, 20, 0x0000000008000d18, 134221080, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_start_ota_upgrade, 20, 0x0000000008000d2c, 134221100, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_set_app_valid_bit, 20, 0x0000000008000d40, 134221120, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, text.platform_dct_write, 36, 0x0000000008000d54, 134221140, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,App, text.startup.main, 108, 0x0000000008000d78, 134221176, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
-FLASH,platform, text.platform_init_peripheral_irq_priorities, 92, 0x0000000008000de4, 134221284, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-FLASH,platform, text.platform_init_external_devices, 68, 0x0000000008000e40, 134221376, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-FLASH,WWD, text.platform_init_rtos_irq_priorities, 32, 0x0000000008000e84, 134221444, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
-FLASH,Host MCU-family library, text.platform_init_system_clocks, 108, 0x0000000008000ea4, 134221476, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-FLASH,Host MCU-family library, text.platform_init_memory, 4, 0x0000000008000f10, 134221584, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-FLASH,Host MCU-family library, text.platform_init_mcu_infrastructure, 52, 0x0000000008000f14, 134221588, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-FLASH,Host MCU-family library, text.platform_gpio_init, 248, 0x0000000008000f48, 134221640, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-FLASH,Host MCU-family library, text.platform_gpio_output_low, 28, 0x0000000008001040, 134221888, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-FLASH,Host MCU-family library, text.platform_gpio_irq_manager_init, 32, 0x000000000800105c, 134221916, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-FLASH,Host MCU-family library, text.platform_mcu_powersave_disable, 8, 0x000000000800107c, 134221948, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
-FLASH,Host MCU-family library, text.platform_mcu_powersave_enable, 8, 0x0000000008001084, 134221956, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
-FLASH,Host MCU-family library, text.platform_uart_irq, 64, 0x000000000800108c, 134221964, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-FLASH,Host MCU-family library, text.platform_uart_tx_dma_irq, 200, 0x00000000080010cc, 134222028, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-FLASH,Host MCU-family library, text.platform_uart_rx_dma_irq, 200, 0x0000000008001194, 134222228, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-FLASH,Host MCU-family library, text.platform_watchdog_init, 156, 0x000000000800125c, 134222428, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
-FLASH,Host MCU-family library, text.platform_watchdog_kick, 84, 0x00000000080012f8, 134222584, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
-FLASH,Other, text.ring_buffer_used_space, 20, 0x000000000800134c, 134222668, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
-FLASH,Host MCU-family library, text.NVIC_PriorityGroupConfig, 20, 0x0000000008001360, 134222688, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
-FLASH,Host MCU-family library, text.SysTick_CLKSourceConfig, 24, 0x0000000008001374, 134222708, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
-FLASH,Host MCU-family library, text.FLASH_SetLatency, 12, 0x000000000800138c, 134222732, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_PrefetchBufferCmd, 28, 0x0000000008001398, 134222744, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_Unlock, 32, 0x00000000080013b4, 134222772, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_Lock, 16, 0x00000000080013d4, 134222804, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_EraseSector, 388, 0x00000000080013e4, 134222820, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_ProgramWord, 344, 0x0000000008001568, 134223208, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_ProgramByte, 340, 0x00000000080016c0, 134223552, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.FLASH_ClearFlag, 12, 0x0000000008001814, 134223892, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-FLASH,Host MCU-family library, text.GPIO_Init, 168, 0x0000000008001820, 134223904, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
-FLASH,Host MCU-family library, text.IWDG_WriteAccessCmd, 12, 0x00000000080018c8, 134224072, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-FLASH,Host MCU-family library, text.IWDG_SetPrescaler, 12, 0x00000000080018d4, 134224084, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-FLASH,Host MCU-family library, text.IWDG_SetReload, 12, 0x00000000080018e0, 134224096, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-FLASH,Host MCU-family library, text.IWDG_ReloadCounter, 16, 0x00000000080018ec, 134224108, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-FLASH,Host MCU-family library, text.IWDG_Enable, 16, 0x00000000080018fc, 134224124, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-FLASH,Host MCU-family library, text.RCC_HSEConfig, 16, 0x000000000800190c, 134224140, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_WaitForHSEStartUp, 52, 0x000000000800191c, 134224156, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_PLLConfig, 36, 0x0000000008001950, 134224208, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_PLLCmd, 12, 0x0000000008001974, 134224244, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_SYSCLKConfig, 20, 0x0000000008001980, 134224256, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_GetSYSCLKSource, 16, 0x0000000008001994, 134224276, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_HCLKConfig, 20, 0x00000000080019a4, 134224292, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_PCLK1Config, 20, 0x00000000080019b8, 134224312, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_PCLK2Config, 20, 0x00000000080019cc, 134224332, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_APB1PeriphClockCmd, 24, 0x00000000080019e0, 134224352, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_APB2PeriphClockCmd, 24, 0x00000000080019f8, 134224376, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_APB1PeriphResetCmd, 24, 0x0000000008001a10, 134224400, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.RCC_GetFlagStatus, 52, 0x0000000008001a28, 134224424, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-FLASH,Host MCU-family library, text.TIM_TimeBaseInit, 152, 0x0000000008001a5c, 134224476, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-FLASH,Host MCU-family library, text.TIM_UpdateRequestConfig, 28, 0x0000000008001af4, 134224628, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-FLASH,Host MCU-family library, text.TIM_Cmd, 28, 0x0000000008001b10, 134224656, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-FLASH,Host MCU-family library, text.TIM_ITConfig, 20, 0x0000000008001b2c, 134224684, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-FLASH,Host MCU-family library, text.TIM_ClearITPendingBit, 8, 0x0000000008001b40, 134224704, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-FLASH,WWD, text.host_rtos_set_semaphore, 16, 0x0000000008001b48, 134224712, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
-FLASH,libc, text.memcmp, 100, 0x0000000008001b58, 134224728, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
-FLASH,libc, text.memcpy, 288, 0x0000000008001bbc, 134224828, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
-FLASH,libc, text.memset, 160, 0x0000000008001cdc, 134225116, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
-FLASH,Other, rodata.DCT_section_offsets, 20, 0x0000000008001d7c, 134225276, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,Other, rodata.str1.4, 4, 0x0000000008001d90, 134225296, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-FLASH,platform, rodata.platform_gpio_pins, 136, 0x0000000008001d94, 134225300, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-FLASH,Host MCU-family library, rodata.gpio_peripheral_clocks, 32, 0x0000000008001e1c, 134225436, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-FLASH,Startup Stack & Link Script fill, fill, 4, 0x0000000008001e3c, 134225468, .iplt
+FLASH,Other, text.platform_erase_app, 56, 0x0000000008000778, 134219640, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_write_app_chunk, 112, 0x00000000080007b0, 134219696, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_get_current_dct_address, 292, 0x0000000008000820, 134219808, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_dct_read_with_copy, 308, 0x0000000008000944, 134220100, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_write_dct.constprop.0, 1268, 0x0000000008000a78, 134220408, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_perform_factory_reset, 20, 0x0000000008000f6c, 134221676, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_start_ota_upgrade, 20, 0x0000000008000f80, 134221696, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_set_app_valid_bit, 20, 0x0000000008000f94, 134221716, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,Other, text.platform_dct_write, 36, 0x0000000008000fa8, 134221736, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,App, text.startup.main, 108, 0x0000000008000fcc, 134221772, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+FLASH,platform, text.platform_init_peripheral_irq_priorities, 92, 0x0000000008001038, 134221880, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+FLASH,platform, text.platform_init_external_devices, 68, 0x0000000008001094, 134221972, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+FLASH,WWD, text.platform_init_rtos_irq_priorities, 32, 0x00000000080010d8, 134222040, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+FLASH,Host MCU-family library, text.platform_init_system_clocks, 108, 0x00000000080010f8, 134222072, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+FLASH,Host MCU-family library, text.platform_init_memory, 4, 0x0000000008001164, 134222180, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+FLASH,Host MCU-family library, text.platform_init_mcu_infrastructure, 52, 0x0000000008001168, 134222184, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+FLASH,Host MCU-family library, text.platform_gpio_init, 248, 0x000000000800119c, 134222236, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+FLASH,Host MCU-family library, text.platform_gpio_output_low, 28, 0x0000000008001294, 134222484, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+FLASH,Host MCU-family library, text.platform_gpio_irq_manager_init, 32, 0x00000000080012b0, 134222512, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+FLASH,Host MCU-family library, text.platform_mcu_powersave_disable, 8, 0x00000000080012d0, 134222544, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+FLASH,Host MCU-family library, text.platform_mcu_powersave_enable, 8, 0x00000000080012d8, 134222552, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+FLASH,Host MCU-family library, text.platform_uart_irq, 64, 0x00000000080012e0, 134222560, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+FLASH,Host MCU-family library, text.platform_uart_tx_dma_irq, 200, 0x0000000008001320, 134222624, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+FLASH,Host MCU-family library, text.platform_uart_rx_dma_irq, 200, 0x00000000080013e8, 134222824, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+FLASH,Host MCU-family library, text.platform_watchdog_init, 156, 0x00000000080014b0, 134223024, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+FLASH,Host MCU-family library, text.platform_watchdog_kick, 84, 0x000000000800154c, 134223180, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+FLASH,Other, text.ring_buffer_used_space, 20, 0x00000000080015a0, 134223264, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+FLASH,Host MCU-family library, text.NVIC_PriorityGroupConfig, 20, 0x00000000080015b4, 134223284, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+FLASH,Host MCU-family library, text.SysTick_CLKSourceConfig, 24, 0x00000000080015c8, 134223304, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+FLASH,Host MCU-family library, text.FLASH_SetLatency, 12, 0x00000000080015e0, 134223328, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_PrefetchBufferCmd, 28, 0x00000000080015ec, 134223340, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_Unlock, 32, 0x0000000008001608, 134223368, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_Lock, 16, 0x0000000008001628, 134223400, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_EraseSector, 388, 0x0000000008001638, 134223416, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_ProgramWord, 344, 0x00000000080017bc, 134223804, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_ProgramByte, 340, 0x0000000008001914, 134224148, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.FLASH_ClearFlag, 12, 0x0000000008001a68, 134224488, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+FLASH,Host MCU-family library, text.GPIO_Init, 168, 0x0000000008001a74, 134224500, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+FLASH,Host MCU-family library, text.IWDG_WriteAccessCmd, 12, 0x0000000008001b1c, 134224668, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+FLASH,Host MCU-family library, text.IWDG_SetPrescaler, 12, 0x0000000008001b28, 134224680, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+FLASH,Host MCU-family library, text.IWDG_SetReload, 12, 0x0000000008001b34, 134224692, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+FLASH,Host MCU-family library, text.IWDG_ReloadCounter, 16, 0x0000000008001b40, 134224704, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+FLASH,Host MCU-family library, text.IWDG_Enable, 16, 0x0000000008001b50, 134224720, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+FLASH,Host MCU-family library, text.RCC_HSEConfig, 16, 0x0000000008001b60, 134224736, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_WaitForHSEStartUp, 52, 0x0000000008001b70, 134224752, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_PLLConfig, 36, 0x0000000008001ba4, 134224804, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_PLLCmd, 12, 0x0000000008001bc8, 134224840, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_SYSCLKConfig, 20, 0x0000000008001bd4, 134224852, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_GetSYSCLKSource, 16, 0x0000000008001be8, 134224872, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_HCLKConfig, 20, 0x0000000008001bf8, 134224888, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_PCLK1Config, 20, 0x0000000008001c0c, 134224908, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_PCLK2Config, 20, 0x0000000008001c20, 134224928, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_APB1PeriphClockCmd, 24, 0x0000000008001c34, 134224948, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_APB2PeriphClockCmd, 24, 0x0000000008001c4c, 134224972, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_APB1PeriphResetCmd, 24, 0x0000000008001c64, 134224996, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.RCC_GetFlagStatus, 52, 0x0000000008001c7c, 134225020, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+FLASH,Host MCU-family library, text.TIM_TimeBaseInit, 152, 0x0000000008001cb0, 134225072, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+FLASH,Host MCU-family library, text.TIM_UpdateRequestConfig, 28, 0x0000000008001d48, 134225224, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+FLASH,Host MCU-family library, text.TIM_Cmd, 28, 0x0000000008001d64, 134225252, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+FLASH,Host MCU-family library, text.TIM_ITConfig, 20, 0x0000000008001d80, 134225280, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+FLASH,Host MCU-family library, text.TIM_ClearITPendingBit, 8, 0x0000000008001d94, 134225300, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+FLASH,WWD, text.host_rtos_set_semaphore, 16, 0x0000000008001d9c, 134225308, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+FLASH,libc, text.memcmp, 100, 0x0000000008001dac, 134225324, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+FLASH,libc, text.memcpy, 288, 0x0000000008001e10, 134225424, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+FLASH,libc, text.memset, 160, 0x0000000008001f30, 134225712, /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+FLASH,Other, rodata.DCT_section_offsets, 20, 0x0000000008001fd0, 134225872, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+FLASH,platform, rodata.platform_gpio_pins, 136, 0x0000000008001fe4, 134225892, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+FLASH,Host MCU-family library, rodata.gpio_peripheral_clocks, 32, 0x000000000800206c, 134226028, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+FLASH,Startup Stack & Link Script fill, fill, 4, 0x000000000800208c, 134226060, .iplt
 RAM,WWD, bss.noos_total_time, 4, 0x0000000020000000, 536870912, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
 RAM,platform, bss.platform_uart_drivers, 48, 0x0000000020000004, 536870916, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
 RAM,Host MCU-family library, bss.gpio_irq_data, 192, 0x0000000020000034, 536870964, build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
@@ -98,11 +97,11 @@ App                               ,     108,       0
 Host MCU-family library           ,    3612,     192
 Interrupt Vectors                 ,     424,       0
 libc                              ,     548,       0
-Other                             ,    1728,       0
+Other                             ,    2320,       0
 platform                          ,     652,      48
 Startup Stack & Link Script fill  ,       4,    4000
 WWD                               ,      80,       4
 ----------------------------------,--------,---------
-TOTAL (bytes)                     ,    7156,    4244
+TOTAL (bytes)                     ,    7748,    4244
 ----------------------------------,--------,---------
 

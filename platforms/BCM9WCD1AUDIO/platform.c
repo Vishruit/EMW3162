@@ -300,26 +300,33 @@ static platform_uart_config_t stdio_config =
 };
 #endif
 
-/* Wi-Fi control pins. Used by WICED/platform/MCU/wwd_platform_common.c */
+/* Wi-Fi control pins. Used by WICED/platform/MCU/wwd_platform_common.c
+ * SDIO: WWD_PIN_BOOTSTRAP[1:0] = b'00
+ * gSPI: WWD_PIN_BOOTSTRAP[1:0] = b'01
+ */
 const platform_gpio_t wifi_control_pins[] =
 {
-    [WWD_PIN_POWER]       = { GPIOF, 11 },
-    [WWD_PIN_RESET]       = { GPIOB,  5 },
-    [WWD_PIN_32K_CLK]     = { GPIOA,  8 },
-    [WWD_PIN_BOOTSTRAP_0] = { GPIOB,  0 },
-    [WWD_PIN_BOOTSTRAP_1] = { GPIOB,  1 },
+    [WWD_PIN_POWER      ] = { GPIOC,  1 },
+    [WWD_PIN_RESET      ] = { GPIOC,  5 },
+#if defined ( WICED_USE_WIFI_32K_CLOCK_MCO )
+    [WWD_PIN_32K_CLK    ] = { GPIOA,  8 },
+#else
+    [WWD_PIN_32K_CLK    ] = { GPIOA, 11 },
+#endif
+    [WWD_PIN_BOOTSTRAP_0] = { GPIOB,  12 },
+    [WWD_PIN_BOOTSTRAP_1] = { GPIOB,  13 },
 };
 
 /* Wi-Fi SDIO bus pins. Used by WICED/platform/STM32F2xx/WWD/wwd_SDIO.c */
 const platform_gpio_t wifi_sdio_pins[] =
 {
-    [WWD_PIN_SDIO_OOB_IRQ] = { GPIOB,  0 },
-    [WWD_PIN_SDIO_CLK]     = { GPIOC, 12 },
-    [WWD_PIN_SDIO_CMD]     = { GPIOD,  2 },
-    [WWD_PIN_SDIO_D0]      = { GPIOC,  8 },
-    [WWD_PIN_SDIO_D1]      = { GPIOC,  9 },
-    [WWD_PIN_SDIO_D2]      = { GPIOC, 10 },
-    [WWD_PIN_SDIO_D3]      = { GPIOC, 11 },
+    [WWD_PIN_SDIO_OOB_IRQ] = { GPIOB,  13 },
+    [WWD_PIN_SDIO_CLK    ] = { GPIOC, 12 },
+    [WWD_PIN_SDIO_CMD    ] = { GPIOD,  2 },
+    [WWD_PIN_SDIO_D0     ] = { GPIOC,  8 },
+    [WWD_PIN_SDIO_D1     ] = { GPIOC,  9 },
+    [WWD_PIN_SDIO_D2     ] = { GPIOC, 10 },
+    [WWD_PIN_SDIO_D3     ] = { GPIOC, 11 },
 };
 
 /* Bluetooth control pins. Used by libraries/bluetooth/internal/bus/UART/bt_bus.c */

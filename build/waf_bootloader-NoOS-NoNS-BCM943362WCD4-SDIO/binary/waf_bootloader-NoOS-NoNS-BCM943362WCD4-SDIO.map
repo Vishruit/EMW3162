@@ -177,6 +177,8 @@ Discarded input sections
                 0x0000000000000000       0x3c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
  .rodata.platform_spi_peripherals
                 0x0000000000000000       0x4c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .rodata.platform_i2c_peripherals
+                0x0000000000000000       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
  .rodata.platform_pwm_peripherals
                 0x0000000000000000       0xb4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
  .comment       0x0000000000000000       0x12 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
@@ -1126,7 +1128,7 @@ Linker script and memory map
                 0x0000000008000200       0x30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
                 0x0000000008000200                shared_waf_api_val
 
-.text           0x0000000008000400     0x1a40
+.text           0x0000000008000400     0x1c90
                 0x0000000008000400                link_code_location = .
  *(.text.irq)
  .text.irq      0x0000000008000400       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
@@ -1248,252 +1250,250 @@ Linker script and memory map
                 0x0000000008000740       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_copy_external_to_internal
                 0x0000000008000774        0x4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .text.platform_get_current_dct_address
-                0x0000000008000778       0x4c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .text.platform_dct_read_with_copy
-                0x00000000080007c4       0x64 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_erase_app
-                0x0000000008000828       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008000778       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_write_app_chunk
-                0x0000000008000860       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .text.platform_write_dct.constprop.1
-                0x00000000080008d0      0x448 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x00000000080007b0       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .text.platform_get_current_dct_address
+                0x0000000008000820      0x124 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .text.platform_dct_read_with_copy
+                0x0000000008000944      0x134 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .text.platform_write_dct.constprop.0
+                0x0000000008000a78      0x4f4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_perform_factory_reset
-                0x0000000008000d18       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008000f6c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_start_ota_upgrade
-                0x0000000008000d2c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008000f80       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_set_app_valid_bit
-                0x0000000008000d40       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008000f94       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.platform_dct_write
-                0x0000000008000d54       0x24 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008000fa8       0x24 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
  .text.startup.main
-                0x0000000008000d78       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
-                0x0000000008000d78                main
+                0x0000000008000fcc       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+                0x0000000008000fcc                main
  .text.platform_init_peripheral_irq_priorities
-                0x0000000008000de4       0x5c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-                0x0000000008000de4                platform_init_peripheral_irq_priorities
+                0x0000000008001038       0x5c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+                0x0000000008001038                platform_init_peripheral_irq_priorities
  .text.platform_init_external_devices
-                0x0000000008000e40       0x44 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-                0x0000000008000e40                platform_init_external_devices
+                0x0000000008001094       0x44 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+                0x0000000008001094                platform_init_external_devices
  .text.platform_init_rtos_irq_priorities
-                0x0000000008000e84       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
-                0x0000000008000e84                platform_init_rtos_irq_priorities
+                0x00000000080010d8       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+                0x00000000080010d8                platform_init_rtos_irq_priorities
  .text.platform_init_system_clocks
-                0x0000000008000ea4       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-                0x0000000008000ea4                platform_init_system_clocks
+                0x00000000080010f8       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+                0x00000000080010f8                platform_init_system_clocks
  .text.platform_init_memory
-                0x0000000008000f10        0x4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-                0x0000000008000f10                platform_init_memory
+                0x0000000008001164        0x4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+                0x0000000008001164                platform_init_memory
  .text.platform_init_mcu_infrastructure
-                0x0000000008000f14       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
-                0x0000000008000f14                platform_init_mcu_infrastructure
+                0x0000000008001168       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+                0x0000000008001168                platform_init_mcu_infrastructure
  .text.platform_gpio_init
-                0x0000000008000f48       0xf8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-                0x0000000008000f48                platform_gpio_init
+                0x000000000800119c       0xf8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+                0x000000000800119c                platform_gpio_init
  .text.platform_gpio_output_low
-                0x0000000008001040       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-                0x0000000008001040                platform_gpio_output_low
+                0x0000000008001294       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+                0x0000000008001294                platform_gpio_output_low
  .text.platform_gpio_irq_manager_init
-                0x000000000800105c       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-                0x000000000800105c                platform_gpio_irq_manager_init
+                0x00000000080012b0       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+                0x00000000080012b0                platform_gpio_irq_manager_init
  .text.platform_mcu_powersave_disable
-                0x000000000800107c        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
-                0x000000000800107c                platform_mcu_powersave_disable
+                0x00000000080012d0        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+                0x00000000080012d0                platform_mcu_powersave_disable
  .text.platform_mcu_powersave_enable
-                0x0000000008001084        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
-                0x0000000008001084                platform_mcu_powersave_enable
+                0x00000000080012d8        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+                0x00000000080012d8                platform_mcu_powersave_enable
  .text.platform_uart_irq
-                0x000000000800108c       0x40 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-                0x000000000800108c                platform_uart_irq
+                0x00000000080012e0       0x40 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+                0x00000000080012e0                platform_uart_irq
  .text.platform_uart_tx_dma_irq
-                0x00000000080010cc       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-                0x00000000080010cc                platform_uart_tx_dma_irq
+                0x0000000008001320       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+                0x0000000008001320                platform_uart_tx_dma_irq
  .text.platform_uart_rx_dma_irq
-                0x0000000008001194       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
-                0x0000000008001194                platform_uart_rx_dma_irq
+                0x00000000080013e8       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+                0x00000000080013e8                platform_uart_rx_dma_irq
  .text.platform_watchdog_init
-                0x000000000800125c       0x9c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
-                0x000000000800125c                platform_watchdog_init
+                0x00000000080014b0       0x9c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+                0x00000000080014b0                platform_watchdog_init
  .text.platform_watchdog_kick
-                0x00000000080012f8       0x54 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
-                0x00000000080012f8                platform_watchdog_kick
+                0x000000000800154c       0x54 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+                0x000000000800154c                platform_watchdog_kick
  .text.ring_buffer_used_space
-                0x000000000800134c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
-                0x000000000800134c                ring_buffer_used_space
+                0x00000000080015a0       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+                0x00000000080015a0                ring_buffer_used_space
  .text.NVIC_PriorityGroupConfig
-                0x0000000008001360       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
-                0x0000000008001360                NVIC_PriorityGroupConfig
+                0x00000000080015b4       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+                0x00000000080015b4                NVIC_PriorityGroupConfig
  .text.SysTick_CLKSourceConfig
-                0x0000000008001374       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
-                0x0000000008001374                SysTick_CLKSourceConfig
+                0x00000000080015c8       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+                0x00000000080015c8                SysTick_CLKSourceConfig
  .text.FLASH_SetLatency
-                0x000000000800138c        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x000000000800138c                FLASH_SetLatency
+                0x00000000080015e0        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x00000000080015e0                FLASH_SetLatency
  .text.FLASH_PrefetchBufferCmd
-                0x0000000008001398       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x0000000008001398                FLASH_PrefetchBufferCmd
+                0x00000000080015ec       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x00000000080015ec                FLASH_PrefetchBufferCmd
  .text.FLASH_Unlock
-                0x00000000080013b4       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x00000000080013b4                FLASH_Unlock
+                0x0000000008001608       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x0000000008001608                FLASH_Unlock
  .text.FLASH_Lock
-                0x00000000080013d4       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x00000000080013d4                FLASH_Lock
+                0x0000000008001628       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x0000000008001628                FLASH_Lock
  .text.FLASH_EraseSector
-                0x00000000080013e4      0x184 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x00000000080013e4                FLASH_EraseSector
+                0x0000000008001638      0x184 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x0000000008001638                FLASH_EraseSector
  .text.FLASH_ProgramWord
-                0x0000000008001568      0x158 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x0000000008001568                FLASH_ProgramWord
+                0x00000000080017bc      0x158 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x00000000080017bc                FLASH_ProgramWord
  .text.FLASH_ProgramByte
-                0x00000000080016c0      0x154 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x00000000080016c0                FLASH_ProgramByte
+                0x0000000008001914      0x154 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x0000000008001914                FLASH_ProgramByte
  .text.FLASH_ClearFlag
-                0x0000000008001814        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
-                0x0000000008001814                FLASH_ClearFlag
+                0x0000000008001a68        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+                0x0000000008001a68                FLASH_ClearFlag
  .text.GPIO_Init
-                0x0000000008001820       0xa8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
-                0x0000000008001820                GPIO_Init
+                0x0000000008001a74       0xa8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+                0x0000000008001a74                GPIO_Init
  .text.IWDG_WriteAccessCmd
-                0x00000000080018c8        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-                0x00000000080018c8                IWDG_WriteAccessCmd
+                0x0000000008001b1c        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+                0x0000000008001b1c                IWDG_WriteAccessCmd
  .text.IWDG_SetPrescaler
-                0x00000000080018d4        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-                0x00000000080018d4                IWDG_SetPrescaler
+                0x0000000008001b28        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+                0x0000000008001b28                IWDG_SetPrescaler
  .text.IWDG_SetReload
-                0x00000000080018e0        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-                0x00000000080018e0                IWDG_SetReload
+                0x0000000008001b34        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+                0x0000000008001b34                IWDG_SetReload
  .text.IWDG_ReloadCounter
-                0x00000000080018ec       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-                0x00000000080018ec                IWDG_ReloadCounter
+                0x0000000008001b40       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+                0x0000000008001b40                IWDG_ReloadCounter
  .text.IWDG_Enable
-                0x00000000080018fc       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
-                0x00000000080018fc                IWDG_Enable
+                0x0000000008001b50       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+                0x0000000008001b50                IWDG_Enable
  .text.RCC_HSEConfig
-                0x000000000800190c       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x000000000800190c                RCC_HSEConfig
+                0x0000000008001b60       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001b60                RCC_HSEConfig
  .text.RCC_WaitForHSEStartUp
-                0x000000000800191c       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x000000000800191c                RCC_WaitForHSEStartUp
+                0x0000000008001b70       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001b70                RCC_WaitForHSEStartUp
  .text.RCC_PLLConfig
-                0x0000000008001950       0x24 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001950                RCC_PLLConfig
+                0x0000000008001ba4       0x24 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001ba4                RCC_PLLConfig
  .text.RCC_PLLCmd
-                0x0000000008001974        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001974                RCC_PLLCmd
+                0x0000000008001bc8        0xc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001bc8                RCC_PLLCmd
  .text.RCC_SYSCLKConfig
-                0x0000000008001980       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001980                RCC_SYSCLKConfig
+                0x0000000008001bd4       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001bd4                RCC_SYSCLKConfig
  .text.RCC_GetSYSCLKSource
-                0x0000000008001994       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001994                RCC_GetSYSCLKSource
+                0x0000000008001be8       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001be8                RCC_GetSYSCLKSource
  .text.RCC_HCLKConfig
-                0x00000000080019a4       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x00000000080019a4                RCC_HCLKConfig
+                0x0000000008001bf8       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001bf8                RCC_HCLKConfig
  .text.RCC_PCLK1Config
-                0x00000000080019b8       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x00000000080019b8                RCC_PCLK1Config
+                0x0000000008001c0c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c0c                RCC_PCLK1Config
  .text.RCC_PCLK2Config
-                0x00000000080019cc       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x00000000080019cc                RCC_PCLK2Config
+                0x0000000008001c20       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c20                RCC_PCLK2Config
  .text.RCC_APB1PeriphClockCmd
-                0x00000000080019e0       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x00000000080019e0                RCC_APB1PeriphClockCmd
+                0x0000000008001c34       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c34                RCC_APB1PeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x00000000080019f8       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x00000000080019f8                RCC_APB2PeriphClockCmd
+                0x0000000008001c4c       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c4c                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphResetCmd
-                0x0000000008001a10       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001a10                RCC_APB1PeriphResetCmd
+                0x0000000008001c64       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c64                RCC_APB1PeriphResetCmd
  .text.RCC_GetFlagStatus
-                0x0000000008001a28       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
-                0x0000000008001a28                RCC_GetFlagStatus
+                0x0000000008001c7c       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+                0x0000000008001c7c                RCC_GetFlagStatus
  .text.TIM_TimeBaseInit
-                0x0000000008001a5c       0x98 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-                0x0000000008001a5c                TIM_TimeBaseInit
+                0x0000000008001cb0       0x98 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+                0x0000000008001cb0                TIM_TimeBaseInit
  .text.TIM_UpdateRequestConfig
-                0x0000000008001af4       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-                0x0000000008001af4                TIM_UpdateRequestConfig
- .text.TIM_Cmd  0x0000000008001b10       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-                0x0000000008001b10                TIM_Cmd
+                0x0000000008001d48       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+                0x0000000008001d48                TIM_UpdateRequestConfig
+ .text.TIM_Cmd  0x0000000008001d64       0x1c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+                0x0000000008001d64                TIM_Cmd
  .text.TIM_ITConfig
-                0x0000000008001b2c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-                0x0000000008001b2c                TIM_ITConfig
+                0x0000000008001d80       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+                0x0000000008001d80                TIM_ITConfig
  .text.TIM_ClearITPendingBit
-                0x0000000008001b40        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
-                0x0000000008001b40                TIM_ClearITPendingBit
+                0x0000000008001d94        0x8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+                0x0000000008001d94                TIM_ClearITPendingBit
  .text.host_rtos_set_semaphore
-                0x0000000008001b48       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
-                0x0000000008001b48                host_rtos_set_semaphore
- .text.memcmp   0x0000000008001b58       0x64 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
-                0x0000000008001b58                memcmp
- .text.memcpy   0x0000000008001bbc      0x120 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
-                0x0000000008001bbc                memcpy
- .text.memset   0x0000000008001cdc       0xa0 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
-                0x0000000008001cdc                memset
-                0x0000000008001d7c                link_code_end = .
-                0x0000000008001d7c                . = ALIGN (0x4)
-                0x0000000008001d7c                link_const_variable_data_location = .
+                0x0000000008001d9c       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+                0x0000000008001d9c                host_rtos_set_semaphore
+ .text.memcmp   0x0000000008001dac       0x64 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+                0x0000000008001dac                memcmp
+ .text.memcpy   0x0000000008001e10      0x120 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+                0x0000000008001e10                memcpy
+ .text.memset   0x0000000008001f30       0xa0 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+                0x0000000008001f30                memset
+                0x0000000008001fd0                link_code_end = .
+                0x0000000008001fd0                . = ALIGN (0x4)
+                0x0000000008001fd0                link_const_variable_data_location = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.DCT_section_offsets
-                0x0000000008001d7c       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-                0x0000000008001d7c                DCT_section_offsets
- .rodata.str1.4
-                0x0000000008001d90        0x4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008001fd0       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                0x0000000008001fd0                DCT_section_offsets
  .rodata.platform_gpio_pins
-                0x0000000008001d94       0x88 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-                0x0000000008001d94                platform_gpio_pins
+                0x0000000008001fe4       0x88 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+                0x0000000008001fe4                platform_gpio_pins
  .rodata.gpio_peripheral_clocks
-                0x0000000008001e1c       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
-                0x0000000008001e3c                link_const_variable_data_end = .
-                0x0000000008001e3c                . = ALIGN (0x4)
-                0x0000000008001e3c                link_constructors_location = .
+                0x000000000800206c       0x20 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+                0x000000000800208c                link_const_variable_data_end = .
+                0x000000000800208c                . = ALIGN (0x4)
+                0x000000000800208c                link_constructors_location = .
  *(.preinit_array)
  *(.init_array)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000008001e3c                link_constructors_end = .
-                0x0000000008001e3c                . = ALIGN (0x4)
-                0x0000000008001e3c                link_destructors_location = .
+                0x000000000800208c                link_constructors_end = .
+                0x000000000800208c                . = ALIGN (0x4)
+                0x000000000800208c                link_destructors_location = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x0000000008001e3c                link_destructors_end = .
-                0x0000000008001e40                . = ALIGN (0x10)
- *fill*         0x0000000008001e3c        0x4 
+                0x000000000800208c                link_destructors_end = .
+                0x0000000008002090                . = ALIGN (0x10)
+ *fill*         0x000000000800208c        0x4 
 
-.iplt           0x0000000008001e40        0x0
+.iplt           0x0000000008002090        0x0
  .iplt          0x0000000000000000        0x0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
 
-.rel.dyn        0x0000000008001e40        0x0
+.rel.dyn        0x0000000008002090        0x0
  .rel.iplt      0x0000000000000000        0x0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
 
-.ARM.exidx      0x0000000008001e40        0x0
-                0x0000000008001e40                __exidx_start = ALIGN (0x4)
+.ARM.exidx      0x0000000008002090        0x0
+                0x0000000008002090                __exidx_start = ALIGN (0x4)
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000008001e40                __exidx_end = .
+                0x0000000008002090                __exidx_end = .
 
-.ARM.extab      0x0000000008001e40        0x0
-                0x0000000008001e40                __extab_start = ALIGN (0x4)
+.ARM.extab      0x0000000008002090        0x0
+                0x0000000008002090                __extab_start = ALIGN (0x4)
  *(.ARM.extab*)
-                0x0000000008001e40                __extab_end = .
+                0x0000000008002090                __extab_end = .
 
-.fast           0x0000000020000000        0x0 load address 0x0000000008001e40
-                0x0000000008001e40                link_run_from_ram_code_flash_location = LOADADDR (.fast)
+.fast           0x0000000020000000        0x0 load address 0x0000000008002090
+                0x0000000008002090                link_run_from_ram_code_flash_location = LOADADDR (.fast)
                 0x0000000020000000                link_run_from_ram_code_ram_location = .
  *(.fast .fast.* .text.fastcode)
                 0x0000000020000000                link_run_from_ram_code_ram_end = .
 
-.data           0x0000000020000000        0x0 load address 0x0000000008001e40
-                0x0000000008001e40                link_global_data_initial_values = LOADADDR (.data)
+.data           0x0000000020000000        0x0 load address 0x0000000008002090
+                0x0000000008002090                link_global_data_initial_values = LOADADDR (.data)
                 0x0000000020000000                link_global_data_start = .
  *(.data*)
                 0x0000000020000000                link_global_data_end = .
                 0x0000000020000000                . = ALIGN (., 0x4)
 
-.igot.plt       0x0000000020000000        0x0 load address 0x0000000008001e40
+.igot.plt       0x0000000020000000        0x0 load address 0x0000000008002090
  .igot.plt      0x0000000000000000        0x0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
 
 .startup_globals
@@ -1586,78 +1586,78 @@ LOAD /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64
 END GROUP
 OUTPUT(build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/binary/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x11b92
+.debug_info     0x0000000000000000    0x1228b
  .debug_info    0x0000000000000000      0x553 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
  .debug_info    0x0000000000000553       0xeb build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
  .debug_info    0x000000000000063e       0xc0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/platform_vector_table.o
- .debug_info    0x00000000000006fe     0x2b42 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_info    0x0000000000003240      0xe97 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_info    0x00000000000040d7     0x183e build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
- .debug_info    0x0000000000005915      0x755 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
- .debug_info    0x000000000000606a      0xca9 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_info    0x0000000000006d13      0x25a build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
- .debug_info    0x0000000000006f6d     0x1253 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_info    0x00000000000081c0      0x1f7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_info    0x00000000000083b7     0x25dd build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_info    0x000000000000a994      0xca1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_info    0x000000000000b635      0xba2 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_info    0x000000000000c1d7      0x547 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_info    0x000000000000c71e      0xfbc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_info    0x000000000000d6da      0x7ae build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_info    0x000000000000de88      0x1e1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_info    0x000000000000e069      0xcd1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_info    0x000000000000ed3a     0x249b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_info    0x00000000000111d5      0x662 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_info    0x0000000000011837      0x113 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_info    0x000000000001194a      0x131 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_info    0x0000000000011a7b      0x117 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_info    0x00000000000006fe     0x3018 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_info    0x0000000000003716      0xe97 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_info    0x00000000000045ad     0x1a61 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .debug_info    0x000000000000600e      0x755 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_info    0x0000000000006763      0xca9 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_info    0x000000000000740c      0x25a build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_info    0x0000000000007666     0x1253 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_info    0x00000000000088b9      0x1f7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_info    0x0000000000008ab0     0x25dd build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_info    0x000000000000b08d      0xca1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_info    0x000000000000bd2e      0xba2 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_info    0x000000000000c8d0      0x547 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_info    0x000000000000ce17      0xfbc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_info    0x000000000000ddd3      0x7ae build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_info    0x000000000000e581      0x1e1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_info    0x000000000000e762      0xcd1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_info    0x000000000000f433     0x249b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_info    0x00000000000118ce      0x662 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_info    0x0000000000011f30      0x113 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000012043      0x131 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_info    0x0000000000012174      0x117 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
-.debug_abbrev   0x0000000000000000     0x2a99
+.debug_abbrev   0x0000000000000000     0x2aaa
  .debug_abbrev  0x0000000000000000      0x195 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
  .debug_abbrev  0x0000000000000195       0x90 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
  .debug_abbrev  0x0000000000000225       0x86 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/platform_vector_table.o
- .debug_abbrev  0x00000000000002ab      0x45d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_abbrev  0x0000000000000708      0x1ff build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_abbrev  0x0000000000000907      0x252 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
- .debug_abbrev  0x0000000000000b59      0x190 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
- .debug_abbrev  0x0000000000000ce9      0x24a build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_abbrev  0x0000000000000f33       0xc7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
- .debug_abbrev  0x0000000000000ffa      0x366 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_abbrev  0x0000000000001360      0x112 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_abbrev  0x0000000000001472      0x386 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_abbrev  0x00000000000017f8      0x247 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_abbrev  0x0000000000001a3f      0x1a2 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_abbrev  0x0000000000001be1      0x16e build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_abbrev  0x0000000000001d4f      0x215 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_abbrev  0x0000000000001f64      0x1f8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_abbrev  0x000000000000215c      0x112 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_abbrev  0x000000000000226e      0x289 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_abbrev  0x00000000000024f7      0x2a0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_abbrev  0x0000000000002797      0x139 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_abbrev  0x00000000000028d0       0x7f /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_abbrev  0x000000000000294f       0xab /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_abbrev  0x00000000000029fa       0x9f /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_abbrev  0x00000000000002ab      0x477 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_abbrev  0x0000000000000722      0x1ff build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_abbrev  0x0000000000000921      0x249 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .debug_abbrev  0x0000000000000b6a      0x190 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_abbrev  0x0000000000000cfa      0x24a build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_abbrev  0x0000000000000f44       0xc7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_abbrev  0x000000000000100b      0x366 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_abbrev  0x0000000000001371      0x112 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_abbrev  0x0000000000001483      0x386 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_abbrev  0x0000000000001809      0x247 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_abbrev  0x0000000000001a50      0x1a2 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_abbrev  0x0000000000001bf2      0x16e build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_abbrev  0x0000000000001d60      0x215 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_abbrev  0x0000000000001f75      0x1f8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_abbrev  0x000000000000216d      0x112 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_abbrev  0x000000000000227f      0x289 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_abbrev  0x0000000000002508      0x2a0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_abbrev  0x00000000000027a8      0x139 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_abbrev  0x00000000000028e1       0x7f /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000002960       0xab /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_abbrev  0x0000000000002a0b       0x9f /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
-.debug_loc      0x0000000000000000     0x7764
+.debug_loc      0x0000000000000000     0x7d0b
  .debug_loc     0x0000000000000000       0x14 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
- .debug_loc     0x0000000000000014     0x11a8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_loc     0x00000000000011bc       0x96 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_loc     0x0000000000001252       0x32 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_loc     0x0000000000001284      0x86f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_loc     0x0000000000001af3       0x21 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_loc     0x0000000000001b14      0xfbe build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_loc     0x0000000000002ad2       0x15 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_loc     0x0000000000002ae7      0x332 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_loc     0x0000000000002e19      0x153 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_loc     0x0000000000002f6c     0x1163 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_loc     0x00000000000040cf      0x386 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_loc     0x0000000000004455       0x62 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_loc     0x00000000000044b7      0xbcb build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_loc     0x0000000000005082     0x1ede build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_loc     0x0000000000006f60      0x197 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_loc     0x00000000000070f7      0x14e /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_loc     0x0000000000007245      0x318 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_loc     0x000000000000755d      0x207 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_loc     0x0000000000000014     0x174f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_loc     0x0000000000001763       0x96 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_loc     0x00000000000017f9       0x32 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_loc     0x000000000000182b      0x86f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_loc     0x000000000000209a       0x21 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_loc     0x00000000000020bb      0xfbe build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_loc     0x0000000000003079       0x15 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_loc     0x000000000000308e      0x332 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_loc     0x00000000000033c0      0x153 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_loc     0x0000000000003513     0x1163 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_loc     0x0000000000004676      0x386 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_loc     0x00000000000049fc       0x62 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_loc     0x0000000000004a5e      0xbcb build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_loc     0x0000000000005629     0x1ede build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_loc     0x0000000000007507      0x197 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_loc     0x000000000000769e      0x14e /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_loc     0x00000000000077ec      0x318 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_loc     0x0000000000007b04      0x207 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
 .debug_aranges  0x0000000000000000      0xae8
  .debug_aranges
@@ -1709,131 +1709,131 @@ OUTPUT(build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/binary/waf_bootloader-N
  .debug_aranges
                 0x0000000000000ac8       0x20 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
-.debug_ranges   0x0000000000000000     0x1ba0
+.debug_ranges   0x0000000000000000     0x1d08
  .debug_ranges  0x0000000000000000       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
  .debug_ranges  0x0000000000000018       0x18 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
- .debug_ranges  0x0000000000000030      0x468 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_ranges  0x0000000000000498       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_ranges  0x00000000000004a8       0xe0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
- .debug_ranges  0x0000000000000588       0x58 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
- .debug_ranges  0x00000000000005e0       0x48 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_ranges  0x0000000000000628       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
- .debug_ranges  0x0000000000000638      0x100 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_ranges  0x0000000000000738       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_ranges  0x0000000000000770      0x4f0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_ranges  0x0000000000000c60       0x28 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_ranges  0x0000000000000c88       0x60 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_ranges  0x0000000000000ce8       0x30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_ranges  0x0000000000000d18      0x7a8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_ranges  0x00000000000014c0       0x78 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_ranges  0x0000000000001538       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_ranges  0x0000000000001570      0x188 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_ranges  0x00000000000016f8      0x420 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_ranges  0x0000000000001b18       0x58 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_ranges  0x0000000000001b70       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_ranges  0x0000000000001b80       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_ranges  0x0000000000001b90       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_ranges  0x0000000000000030      0x5d0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_ranges  0x0000000000000600       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_ranges  0x0000000000000610       0xe0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .debug_ranges  0x00000000000006f0       0x58 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_ranges  0x0000000000000748       0x48 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_ranges  0x0000000000000790       0x10 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_ranges  0x00000000000007a0      0x100 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_ranges  0x00000000000008a0       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_ranges  0x00000000000008d8      0x4f0 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_ranges  0x0000000000000dc8       0x28 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_ranges  0x0000000000000df0       0x60 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_ranges  0x0000000000000e50       0x30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_ranges  0x0000000000000e80      0x7a8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_ranges  0x0000000000001628       0x78 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_ranges  0x00000000000016a0       0x38 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_ranges  0x00000000000016d8      0x188 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_ranges  0x0000000000001860      0x420 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_ranges  0x0000000000001c80       0x58 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_ranges  0x0000000000001cd8       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_ranges  0x0000000000001ce8       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_ranges  0x0000000000001cf8       0x10 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
-.debug_line     0x0000000000000000     0x4b5d
+.debug_line     0x0000000000000000     0x4c60
  .debug_line    0x0000000000000000      0x1b4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
  .debug_line    0x00000000000001b4       0xfd build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
  .debug_line    0x00000000000002b1       0xce build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/platform_vector_table.o
- .debug_line    0x000000000000037f      0x621 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_line    0x00000000000009a0      0x12b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_line    0x0000000000000acb      0x30e build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
- .debug_line    0x0000000000000dd9      0x15f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
- .debug_line    0x0000000000000f38      0x321 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_line    0x0000000000001259       0xe7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
- .debug_line    0x0000000000001340      0x4f9 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_line    0x0000000000001839      0x194 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_line    0x00000000000019cd      0x7e3 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_line    0x00000000000021b0      0x28b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_line    0x000000000000243b      0x183 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_line    0x00000000000025be      0x1ea build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_line    0x00000000000027a8      0x861 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_line    0x0000000000003009      0x31b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_line    0x0000000000003324      0x190 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_line    0x00000000000034b4      0x53f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_line    0x00000000000039f3      0xc26 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_line    0x0000000000004619      0x194 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_line    0x00000000000047ad      0x126 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_line    0x00000000000048d3      0x15a /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_line    0x0000000000004a2d      0x130 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_line    0x000000000000037f      0x724 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_line    0x0000000000000aa3      0x12b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_line    0x0000000000000bce      0x30e build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .debug_line    0x0000000000000edc      0x15f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_line    0x000000000000103b      0x321 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_line    0x000000000000135c       0xe7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_line    0x0000000000001443      0x4f9 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_line    0x000000000000193c      0x194 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_line    0x0000000000001ad0      0x7e3 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_line    0x00000000000022b3      0x28b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_line    0x000000000000253e      0x183 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_line    0x00000000000026c1      0x1ea build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_line    0x00000000000028ab      0x861 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_line    0x000000000000310c      0x31b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_line    0x0000000000003427      0x190 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_line    0x00000000000035b7      0x53f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_line    0x0000000000003af6      0xc26 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_line    0x000000000000471c      0x194 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_line    0x00000000000048b0      0x126 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_line    0x00000000000049d6      0x15a /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_line    0x0000000000004b30      0x130 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
-.debug_str      0x0000000000000000     0x850a
+.debug_str      0x0000000000000000     0x861f
  .debug_str     0x0000000000000000      0x43f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
                                         0x48e (size before relaxing)
  .debug_str     0x000000000000043f       0x6d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
                                         0x1cf (size before relaxing)
  .debug_str     0x00000000000004ac       0x5b build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/platform_vector_table.o
                                         0x1bd (size before relaxing)
- .debug_str     0x0000000000000507     0x40ac build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
-                                       0x44f5 (size before relaxing)
- .debug_str     0x00000000000045b3      0x126 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_str     0x0000000000000507     0x409f build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+                                       0x44f0 (size before relaxing)
+ .debug_str     0x00000000000045a6      0x126 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
                                        0x23a3 (size before relaxing)
- .debug_str     0x00000000000046d9      0xfe7 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
-                                       0x142c (size before relaxing)
- .debug_str     0x00000000000056c0       0xa6 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_str     0x00000000000046cc     0x1109 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+                                       0x1555 (size before relaxing)
+ .debug_str     0x00000000000057d5       0xa6 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
                                         0x7e9 (size before relaxing)
- .debug_str     0x0000000000005766      0x4da build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_str     0x000000000000587b      0x4da build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
                                        0x13cd (size before relaxing)
- .debug_str     0x0000000000005c40       0x61 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_str     0x0000000000005d55       0x61 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
                                         0x229 (size before relaxing)
- .debug_str     0x0000000000005ca1      0x604 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_str     0x0000000000005db6      0x604 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
                                        0x1136 (size before relaxing)
- .debug_str     0x00000000000062a5       0xcb build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_str     0x00000000000063ba       0xcb build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
                                         0x450 (size before relaxing)
- .debug_str     0x0000000000006370      0x61c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_str     0x0000000000006485      0x61c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
                                        0x397a (size before relaxing)
- .debug_str     0x000000000000698c      0x214 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_str     0x0000000000006aa1      0x214 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
                                         0xcb7 (size before relaxing)
- .debug_str     0x0000000000006ba0      0x106 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_str     0x0000000000006cb5      0x106 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
                                        0x2094 (size before relaxing)
- .debug_str     0x0000000000006ca6      0x15d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_str     0x0000000000006dbb      0x15d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
                                         0x3e2 (size before relaxing)
- .debug_str     0x0000000000006e03      0x2c1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_str     0x0000000000006f18      0x2c1 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
                                         0x58d (size before relaxing)
- .debug_str     0x00000000000070c4      0x19d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_str     0x00000000000071d9      0x19d build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
                                         0x4d0 (size before relaxing)
- .debug_str     0x0000000000007261       0x92 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_str     0x0000000000007376       0x92 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
                                         0x272 (size before relaxing)
- .debug_str     0x00000000000072f3      0x470 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_str     0x0000000000007408      0x470 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
                                         0x856 (size before relaxing)
- .debug_str     0x0000000000007763      0xa30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_str     0x0000000000007878      0xa30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
                                         0xe04 (size before relaxing)
- .debug_str     0x0000000000008193      0x128 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_str     0x00000000000082a8      0x128 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
                                         0xb5e (size before relaxing)
- .debug_str     0x00000000000082bb      0x132 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_str     0x00000000000083d0      0x132 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
                                         0x1d2 (size before relaxing)
- .debug_str     0x00000000000083ed       0xd2 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_str     0x0000000000008502       0xd2 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
                                         0x20b (size before relaxing)
- .debug_str     0x00000000000084bf       0x4b /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_str     0x00000000000085d4       0x4b /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
                                         0x1e6 (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x199c
+.debug_frame    0x0000000000000000     0x19b4
  .debug_frame   0x0000000000000000       0x34 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/crt0_GCC.o
  .debug_frame   0x0000000000000034       0x40 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/../../ARM_CM3/hardfault_handler.o
- .debug_frame   0x0000000000000074      0x19c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
- .debug_frame   0x0000000000000210       0x30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
- .debug_frame   0x0000000000000240      0x114 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
- .debug_frame   0x0000000000000354       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
- .debug_frame   0x00000000000003c0       0x7c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
- .debug_frame   0x000000000000043c       0x2c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
- .debug_frame   0x0000000000000468      0x178 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
- .debug_frame   0x00000000000005e0       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
- .debug_frame   0x0000000000000650      0x168 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
- .debug_frame   0x00000000000007b8       0x80 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
- .debug_frame   0x0000000000000838       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
- .debug_frame   0x0000000000000900       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
- .debug_frame   0x000000000000096c      0x308 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
- .debug_frame   0x0000000000000c74      0x164 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
- .debug_frame   0x0000000000000dd8       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
- .debug_frame   0x0000000000000e48      0x2f4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
- .debug_frame   0x000000000000113c      0x708 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
- .debug_frame   0x0000000000001844       0xbc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
- .debug_frame   0x0000000000001900       0x38 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
- .debug_frame   0x0000000000001938       0x30 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000001968       0x34 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000074      0x1b4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/Modules/./WICED/platform/MCU/STM32F2xx/WAF/waf_platform.o
+ .debug_frame   0x0000000000000228       0x30 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/App_WICED_Bootloader_BCM943362WCD4.a(bootloader.o)
+ .debug_frame   0x0000000000000258      0x114 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
+ .debug_frame   0x000000000000036c       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(noos.o)
+ .debug_frame   0x00000000000003d8       0x7c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
+ .debug_frame   0x0000000000000454       0x2c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_unhandled_isr.o)
+ .debug_frame   0x0000000000000480      0x178 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
+ .debug_frame   0x00000000000005f8       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
+ .debug_frame   0x0000000000000668      0x168 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+ .debug_frame   0x00000000000007d0       0x80 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_watchdog.o)
+ .debug_frame   0x0000000000000850       0xc8 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Ring_Buffer.a(ring_buffer.o)
+ .debug_frame   0x0000000000000918       0x6c build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(misc.o)
+ .debug_frame   0x0000000000000984      0x308 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_flash.o)
+ .debug_frame   0x0000000000000c8c      0x164 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_gpio.o)
+ .debug_frame   0x0000000000000df0       0x70 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_iwdg.o)
+ .debug_frame   0x0000000000000e60      0x2f4 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_rcc.o)
+ .debug_frame   0x0000000000001154      0x708 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Libraries.a(stm32f2xx_tim.o)
+ .debug_frame   0x000000000000185c       0xbc build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/WWD_NoOS_Interface.a(wwd_rtos.o)
+ .debug_frame   0x0000000000001918       0x38 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000001950       0x30 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000001980       0x34 /home/wouters/GIT/willemwouters/STM32_EMW3162_SDK/tools/ARM_GNU/bin/Linux64/../../lib/thumb/v7m/libc.a(lib_a-memset.o)
 
 Cross Reference Table
 
@@ -2475,6 +2475,7 @@ platform_gpio_output_low                          build/waf_bootloader-NoOS-NoNS
 platform_gpio_pins                                build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
 platform_gpio_set_alternate_function              build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_gpio.o)
                                                   build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_uart.o)
+platform_i2c_peripherals                          build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)
 platform_idle_hook                                build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx_Peripheral_Drivers.a(platform_mcu_powersave.o)
 platform_init_connectivity_module                 build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/STM32F2xx.a(platform_init.o)
 platform_init_external_devices                    build/waf_bootloader-NoOS-NoNS-BCM943362WCD4-SDIO/libraries/Platform_BCM943362WCD4.a(platform.o)

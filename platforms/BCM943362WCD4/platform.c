@@ -68,7 +68,7 @@ const platform_gpio_t platform_gpio_pins[] =
     [WICED_GPIO_14] = { GPIOA, 14 },
     [WICED_GPIO_15] = { GPIOA, 15 },
     [WICED_GPIO_16] = { GPIOB,  3 },
-    [WICED_GPIO_17] = { GPIOB,  4 },
+    [WICED_GPIO_17] = { GPIOB,  9 },
 };
 
 /* ADC peripherals. Used WICED/platform/MCU/wiced_platform_common.c */
@@ -183,6 +183,30 @@ const platform_uart_t platform_uart_peripherals[] =
     },
 };
 platform_uart_driver_t platform_uart_drivers[WICED_UART_MAX];
+
+
+
+/* I2C peripherals. Used by WICED/platform/MCU/wiced_platform_common.c */
+const platform_i2c_t platform_i2c_peripherals[] =
+{
+    [WICED_I2C_1] =
+    {
+        .port                    = I2C1,
+        .pin_scl                 = &platform_gpio_pins[WICED_GPIO_11],
+        .pin_sda                 = &platform_gpio_pins[WICED_GPIO_17],
+        .peripheral_clock_reg    = RCC_APB1Periph_I2C1,
+        .tx_dma                  = DMA1,
+        .tx_dma_peripheral_clock = RCC_AHB1Periph_DMA1,
+        .tx_dma_stream           = DMA1_Stream7,
+        .rx_dma_stream           = DMA1_Stream5,
+        .tx_dma_stream_id        = 7,
+        .rx_dma_stream_id        = 5,
+        .tx_dma_channel          = DMA_Channel_1,
+        .rx_dma_channel          = DMA_Channel_1,
+        .gpio_af                 = GPIO_AF_I2C1
+    },
+};
+
 
 /* SPI flash. Exposed to the applications through include/wiced_platform.h */
 #if defined ( WICED_PLATFORM_INCLUDES_SPI_FLASH )

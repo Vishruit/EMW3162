@@ -38,10 +38,4 @@ build/snip_apsta-BCM943362WCD4/Modules/./WICED/internal/waf.o: \
  include/wiced_constants.h \
  include/../libraries/bluetooth/include/wiced_bt_constants.h \
  include/wiced_utilities.h \
- libraries/utilities/ring_buffer/./ring_buffer.h \
- WICED/WWD/include/wwd_debug.h include/wiced_defaults.h \
- tools/ARM_GNU/bin/Linux64/../../include/stdio.h \
- tools/ARM_GNU/bin/Linux64/../../lib/include/stdarg.h \
- tools/ARM_GNU/bin/Linux64/../../include/sys/types.h \
- tools/ARM_GNU/bin/Linux64/../../include/machine/types.h \
- tools/ARM_GNU/bin/Linux64/../../include/sys/stdio.h
+ libraries/utilities/ring_buffer/./ring_buffer.h

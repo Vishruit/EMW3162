@@ -54,7 +54,7 @@
 #include "http_server.h"
 #include "resources.h"
 #include "dns_redirect.h"
-#include "AudioCodec.h"
+//#include "AudioCodec.h"
 /******************************************************
  *                      Macros
  ******************************************************/
@@ -128,7 +128,7 @@ void application_start(void)
     wiced_http_server_start( &ap_http_server, 80, ap_web_pages, WICED_AP_INTERFACE );
 
 
-	wiced_result_t result = wm8533_init(&ac);
+	//wiced_result_t result = wm8533_init(&ac);
        
 }
 

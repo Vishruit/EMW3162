@@ -22,16 +22,10 @@ ifndef BUS
 BUS := SDIO
 endif
 
-VALID_BUSES := SDIO SPI
+VALID_BUSES := SDIO
 
-ifeq ($(BUS),SDIO)
 WIFI_IMAGE_DOWNLOAD := direct
 GLOBAL_DEFINES      += WWD_DIRECT_RESOURCES
-else
-ifeq ($(BUS),SPI)
-WIFI_IMAGE_DOWNLOAD := buffered
-endif
-endif
 
 # Global includes
 GLOBAL_INCLUDES  := .

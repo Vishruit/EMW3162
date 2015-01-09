@@ -101,5 +101,4 @@ build/snip_apsta-BCM943362WCD4/Modules/apps/snip/apsta/apsta.o: \
  WICED/platform/MCU/STM32F2xx/../../ARM_CM3/platform_assert.h \
  libraries/daemons/HTTP_server/./http_server.h include/wiced_resource.h \
  build/snip_apsta-BCM943362WCD4/resources/resources.h \
- libraries/daemons/DNS_redirect/./dns_redirect.h \
- apps/snip/apsta/AudioCodec.h
+ libraries/daemons/DNS_redirect/./dns_redirect.h
